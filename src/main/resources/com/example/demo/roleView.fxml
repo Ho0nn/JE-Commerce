@@ -28,12 +28,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <TextField fx:id="name" layoutX="138.0" layoutY="219.0" prefHeight="35.0" prefWidth="145.0" promptText="RoleName" style="-fx-background-color: transport; -fx-border-width: 0px 0px 3px 0px; -fx-border-color: #FFFFFF;">
+      <TextField fx:id="name" layoutX="138.0" layoutY="219.0" prefHeight="35.0" prefWidth="145.0" promptText="RoleName" style="-fx-border-width: 0px 0px 3px 0px; -fx-border-color: #FFFFFF;">
          <font>
             <Font name="Arial Rounded MT Bold" size="26.0" />
          </font>
       </TextField>
-      <TextField fx:id="id" layoutX="138.0" layoutY="298.0" prefHeight="35.0" prefWidth="145.0" promptText="RoleID" style="-fx-background-color: transport; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 3px 0px;">
+      <TextField fx:id="id" layoutX="139.0" layoutY="306.0" prefHeight="35.0" prefWidth="145.0" promptText="RoleID" style="-fx-border-color: #ffffff; -fx-border-width: 0px 0px 3px 0px;">
          <font>
             <Font name="Arial Rounded MT Bold" size="26.0" />
          </font>

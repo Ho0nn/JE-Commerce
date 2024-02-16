@@ -19,7 +19,7 @@ public class ProductModel {
     }
 
     public void addData(Product prod) {
-        String insertData = "INSERT INTO product( name, buy_Price, sell_Price, discount, amount, serial_number, category_id) VALUES ( ?, ?, ?, ?, ?, ?, ?)";
+        String insertData = "INSERT INTO product(name, buy_Price, sell_Price, discount, amount, serial_number, category_id) VALUES ( ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement preparedStatement = con.prepareStatement(insertData)) {
             preparedStatement.setString(1, prod.getName());
             preparedStatement.setDouble(2, prod.getBuyPrice());
@@ -40,7 +40,7 @@ public class ProductModel {
     }
 
     public void updateData(int id, double discount, double Buy_Price, double Sell_Price) {
-        String updateData = "UPDATE product SET discount = ?,Buy_Price=?,Sell_Price=? WHERE id = ?";
+        String updateData = "UPDATE product SET discount = ?,buy_price=?,sell_price=? WHERE id = ?";
         try (PreparedStatement preparedStatement = con.prepareStatement(updateData)) {
             preparedStatement.setDouble(1, discount);
             preparedStatement.setDouble(2, Buy_Price);
@@ -91,7 +91,7 @@ public class ProductModel {
     }
 
     public void deleteData(int index) {
-        String deleteQuery = "DELETE FROM product WHERE id = ?";
+        String deleteQuery = "DELETE FROM product WHERE id =?";
         try (PreparedStatement preState = con.prepareStatement(deleteQuery)) {
             preState.setInt(1, index);
             preState.executeUpdate();

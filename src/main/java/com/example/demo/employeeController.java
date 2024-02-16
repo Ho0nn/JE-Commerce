@@ -141,9 +141,8 @@ public class employeeController implements Initializable {
 
     @FXML
     void onDeleteButtonClick() {
-        Employee selectedEmployee = EmpTable.getSelectionModel().getSelectedItem();
-        if (selectedEmployee != null) {
-            int ID = selectedEmployee.getId();
+    if (!EmpID.getText().isEmpty()) {
+            int ID= Integer.parseInt(EmpID.getText());
             EmpModel em = new EmpModel();
             em.deleteData(ID);
             fillTable();

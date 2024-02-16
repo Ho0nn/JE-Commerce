@@ -83,12 +83,12 @@
             <Image url="@../../../stock-vector--d-shopping-cart-with-cloud-for-online-shopping-and-digital-marketing-ideas-d-basket-shop-cart-2143411437-removebg-preview.png" />
          </image>
       </ImageView>
-      <TextField fx:id="name" layoutX="133.0" layoutY="213.0" prefHeight="50.0" prefWidth="145.0" promptText="Name" style="-fx-background-color: transport; -fx-border-width: 0px 0px 3px 0px; -fx-border-color: #FFFFFF;" styleClass="-fx-text-fill:red">
+      <TextField fx:id="name" layoutX="133.0" layoutY="213.0" prefHeight="50.0" prefWidth="145.0" promptText="Name" style="-fx-border-width: 0px 0px 3px 0px; -fx-border-color: #FFFFFF;" styleClass="-fx-text-fill:red">
          <font>
-            <Font name="Arial Rounded MT Bold" size="26.0"  />
+            <Font name="Arial Rounded MT Bold" size="26.0" />
          </font>
       </TextField>
-      <TextField fx:id="id" layoutX="519.0" layoutY="222.0" prefHeight="50.0" prefWidth="145.0" promptText="ID" style="-fx-background-color: transport; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 3px 0px;">
+      <TextField fx:id="id" layoutX="519.0" layoutY="222.0" prefHeight="50.0" prefWidth="145.0" promptText="ID" style="-fx-border-color: #ffffff; -fx-border-width: 0px 0px 3px 0px;">
          <font>
             <Font name="Arial Rounded MT Bold" size="26.0" />
          </font>

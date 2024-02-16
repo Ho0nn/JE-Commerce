@@ -6,7 +6,7 @@ public class Product {
     private double buyPrice, sellPrice, discount;
 
     public Product( String name, double buyPrice, double sellPrice, double discount, int amount, String serialNum, int categoryID) {
-        this.ID = ID;
+        this.ID=ID;
         this.amount = amount;
         this.name = name;
         this.serialNum = serialNum;

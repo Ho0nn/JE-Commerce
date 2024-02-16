@@ -181,6 +181,7 @@ public class salesController implements Initializable {
             pm.uptoDate(am,idd);
         }
         Stage stage =new Stage();
+        stage.setTitle("Bills");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("billView.fxml"));
         AnchorPane root = loader.load();
         Scene scene = new Scene(root);

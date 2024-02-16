@@ -6,7 +6,6 @@ public class Sales {
     private String Sreil_Num,Bill_Num;
   private double Piece_Price,Discount,Tot_Price;
     private LocalDate date;
-
     public Sales(double piece_Price, double discount, double tot_Price, LocalDate date, int prod_ID, String sreil_Num, int bill_ID, String bill_Num) {
         Prod_ID = prod_ID;
         Sreil_Num = sreil_Num;

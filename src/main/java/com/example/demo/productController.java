@@ -20,25 +20,10 @@ import java.util.logging.Logger;
 
 public class productController implements Initializable {
     @FXML
-    private Button Insert;
-
-    @FXML
     private TextField ProdID;
 
     @FXML
     private TextField ProdName;
-
-    @FXML
-    private Button Clear;
-
-    @FXML
-    private Button Update;
-
-    @FXML
-    private Button Delete;
-
-    @FXML
-    private Label Category1;
 
     @FXML
     private TableView<Product> Products;
@@ -68,23 +53,12 @@ public class productController implements Initializable {
     private TableColumn<Product, Integer> category_id;
 
     @FXML
-    private Label lid;
-
-    @FXML
-    private Label lname;
-
-    @FXML
     private TextField Search;
 
     @FXML
-    private Button SearchBtn;
-
-    @FXML
     private TextField SellPrice;
-
     @FXML
     private TextField SerNum;
-
     @FXML
     private TextField BuyPrice;
     @FXML
@@ -153,11 +127,10 @@ public class productController implements Initializable {
         SerNum.setText("");
         fillTable();
     }
-
     @FXML
     void onDeleteButtonClick() {
         try {
-            int ID = Integer.parseInt(id.getText());
+            int ID = Integer.parseInt(ProdID.getText());
             ProductModel pm = new ProductModel();
             pm.deleteData(ID);
             fillTable();
@@ -169,11 +142,11 @@ public class productController implements Initializable {
             e.printStackTrace();
         }
     }
-@FXML
-
+    @FXML
     void onUpdateButtonClick() {
-        int ID= Integer.parseInt(id.getText());
-        double dis= Double.parseDouble(discount.getText());
+      String idd=ProdID.getText();
+        int ID= Integer.parseInt(idd);
+        double dis= Double.parseDouble(Discount.getText());
         double Bp= Double.parseDouble(BuyPrice.getText());
         double Sp=Double.parseDouble(SellPrice.getText());
         ProductModel pm=new ProductModel();

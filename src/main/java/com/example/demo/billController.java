@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import com.example.demo.Entity.Bill;
-import com.example.demo.Model.BillModel;
 import com.example.demo.Model.Helper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -29,17 +28,6 @@ public class billController implements Initializable {
     @FXML
     private TextField BillNum;
 
-    @FXML
-    private Button Clear;
-
-    @FXML
-    private Button Update;
-
-    @FXML
-    private Button Delete;
-
-    @FXML
-    private Label Bills;
 
     @FXML
     private TableView<Bill> BillTab;
@@ -76,43 +64,6 @@ public class billController implements Initializable {
 
     @FXML
     private TextField Search;
-
-    @FXML
-    private Button SearchBtn;
-
-    @FXML
-    private TextField DayBillNum;
-
-    @FXML
-    private TextField Price;
-@FXML
-private Label LTot;
-    @FXML
-    private Label lamount;
-
-    @FXML
-    private Label lbuy;
-
-    @FXML
-    private Label lsell;
-
-    @FXML
-    private Label lserial;
-
-    @FXML
-    private ComboBox<?> EMpID;
-
-    @FXML
-    private Label lcid;
-
-    @FXML
-    private TextField Amount;
-
-    @FXML
-    private Label LDiscount;
-
-    @FXML
-    private TextField Discount;
     public void con() {
         Connection con = null;
         Statement state = null;
@@ -123,39 +74,6 @@ private Label LTot;
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    @FXML
-    protected void onInsertButtonClick() {
-        String billNum=BillNum.getText();
-        int ID= Integer.parseInt(BillID.getText());
-        int amount= Integer.parseInt(Amount.getText());
-        Double discount= Double.valueOf(Discount.getText());
-        double price= Double.parseDouble(Price.getText());
-        double total=(amount*price);
-        String dayNum=DayBillNum.getText();
-        LocalDate date = LocalDate.now();
-        int empId=new Helper().getId();
-        Bill bill=new Bill(price,discount,total,date,billNum,dayNum,empId);
-        BillModel bm=new BillModel();
-        bm.addData(bill);
-        fillTable();
-    }
-    @FXML
-    void onClearButtonClick() {
-        BillID.setText("");
-        BillNum.setText("");
-        Amount.setText("");
-        Discount.setText("");
-        Price.setText("");
-        LTot.setText("Total");
-        EMpID.setAccessibleText("");
-        DayBillNum.setText("");
-        fillTable();
-    }
-    @FXML
-    void onSearchButtonClick() {
-
     }
 
     @FXML

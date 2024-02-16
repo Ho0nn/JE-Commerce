@@ -30,6 +30,10 @@ public class homeController {
 
     }
     @FXML
+    void goRoles(){
+        viewPane.getChildren().add(getPane("roleView.fxml"));
+    }
+    @FXML
     void goExpenses(){
         viewPane.getChildren().add(getPane("meView.fxml"));
 

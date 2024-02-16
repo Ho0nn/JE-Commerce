@@ -40,8 +40,8 @@ public class EmpModel {
     public void updateData(String email,double base_salary){
         String updateData = "UPDATE employee SET base_salary = ? WHERE email = ?";
         try (PreparedStatement preparedStatement = con.prepareStatement(updateData)) {
-            preparedStatement.setDouble(2, base_salary);
-            preparedStatement.setString(1, email);
+            preparedStatement.setString(2,email );
+            preparedStatement.setDouble(1, base_salary);
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Data Updated!");
@@ -53,7 +53,7 @@ public class EmpModel {
         }
     }
     public void deleteData(int id) {
-        String deleteQuery = "DELETE FROM emplyee WHERE id = ?";
+        String deleteQuery = "DELETE FROM employee WHERE id = ?";
         try (PreparedStatement preState = con.prepareStatement(deleteQuery)) {
             preState.setInt(1, id);
             preState.executeUpdate();

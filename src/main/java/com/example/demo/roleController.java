@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import com.example.demo.Entity.Role;
-import com.example.demo.Model.CategoryModel;
 import com.example.demo.Model.Helper;
 import com.example.demo.Model.RoleModel;
 import javafx.collections.FXCollections;
@@ -99,9 +98,9 @@ public class roleController implements Initializable {
     @FXML
     protected void onUpdateButtonClick() {
         int ID= Integer.parseInt(id.getText());
-        String CatName=name.getText();
-        CategoryModel cm=new CategoryModel();
-        cm.updateData(ID,CatName);
+        String RoleName=name.getText();
+        RoleModel rm=new RoleModel();
+        rm.updateData(ID,RoleName);
         fillTable();
     }
     @FXML
