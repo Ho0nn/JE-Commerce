@@ -1,31 +1,30 @@
 package com.example.demo.Entity;
 
 public class Role {
-    private int Id;
-    private String Name;
+    private int id;
+    private String name;
 
-    public Role(int Id,String Name) {
-        this.Id = Id;
-        this.Name=Name;
+    public Role(int id,String name) {
+        this.id = id;
+        this.name =name;
     }
     public Role() {
-        this.Id = 0;
-        this.Name="";
+
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 }

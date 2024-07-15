@@ -24,7 +24,7 @@ public class CustomerModel {
             preparedStatement.setInt(1, cust.getId());
             preparedStatement.setString(2,cust.getName());
             preparedStatement.setString(3, cust.getPhone());
-            LocalDate localDate =cust.getDete() ; // Assuming 'getDate()' returns LocalDate
+            LocalDate localDate =cust.getDate() ; // Assuming 'getDate()' returns LocalDate
             preparedStatement.setDate(5, Date.valueOf(localDate));
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {

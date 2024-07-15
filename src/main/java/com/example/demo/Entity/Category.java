@@ -1,22 +1,22 @@
 package com.example.demo.Entity;
 public class Category {
     private int id;
-    private String Name;
-    public Category(int id, String Name) {
-        this.Name = Name;
+    private String name;
+    public Category(int id, String name) {
+        this.name = name;
         this.id = id;
     }
     public Category() {
-        this.Name = "";
+        this.name = "";
         this.id = 0;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public int getId() {

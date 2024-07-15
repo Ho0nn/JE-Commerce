@@ -21,15 +21,15 @@ public class BillModel {
     public int addData(Bill bill) {
         String insertData = "insert into bill(total_price,discount,total_price_with_discount,date_time,bill_number,bill_number_pre_day,employee_id) values (?,?,?,?,?,?,?)";
         try (PreparedStatement preparedStatement = con.prepareStatement(insertData, Statement.RETURN_GENERATED_KEYS)) {
-            preparedStatement.setDouble(1, bill.getTot_Price());
+            preparedStatement.setDouble(1, bill.getTotPrice());
             preparedStatement.setDouble(2, bill.getDisc());
-            preparedStatement.setDouble(3, bill.getFinal_Tot());
+            preparedStatement.setDouble(3, bill.getFinalTot());
             LocalDate localDate = bill.getDate();
             Date sqlDate = Date.valueOf(localDate);
             preparedStatement.setDate(4, sqlDate);
-            preparedStatement.setString(5, bill.getBill_Num());
-            preparedStatement.setString(6, bill.getDay_Bill_Num());
-            preparedStatement.setInt(7, bill.getEmp_Id());
+            preparedStatement.setString(5, bill.getBillNum());
+            preparedStatement.setString(6, bill.getDayBillNum());
+            preparedStatement.setInt(7, bill.getEmpId());
 
 
             int rowsAffected = preparedStatement.executeUpdate();

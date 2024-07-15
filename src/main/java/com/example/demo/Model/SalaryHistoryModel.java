@@ -24,11 +24,11 @@ public class SalaryHistoryModel {
             preparedStatement.setDouble(2,sal.getSalary());
             preparedStatement.setDouble(3, sal.getDeduct());
             preparedStatement.setDouble(4, sal.getBouns());
-            preparedStatement.setDouble(5, sal.getTot_Sal());
+            preparedStatement.setDouble(5, sal.getTotSal());
             DateTimeFormatter localDate =sal.getDate() ; // Assuming 'getDate()' returns LocalDate
             Date sqlDate = Date.valueOf(String.valueOf(localDate));
             preparedStatement.setDate(6, sqlDate);
-            preparedStatement.setInt(7, sal.getEmp_Id());
+            preparedStatement.setInt(7, sal.getEmpId());
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Data Inserted Successfully!");
@@ -45,8 +45,8 @@ public class SalaryHistoryModel {
             preparedStatement.setDouble(1, sal.getSalary());
             preparedStatement.setDouble(2, sal.getDeduct());
             preparedStatement.setDouble(3, sal.getBouns());
-            preparedStatement.setDouble(4, sal.getTot_Sal());
-            preparedStatement.setInt(5, sal.getEmp_Id());
+            preparedStatement.setDouble(4, sal.getTotSal());
+            preparedStatement.setInt(5, sal.getEmpId());
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Data Updated!");

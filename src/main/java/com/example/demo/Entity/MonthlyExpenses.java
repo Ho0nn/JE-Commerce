@@ -1,49 +1,43 @@
 package com.example.demo.Entity;
 import java.time.format.DateTimeFormatter;
 public class MonthlyExpenses {
-    private int Id;
-    private String Name,Notice;
-    private double Price;
+    private int id;
+    private String name, notice;
+    private double price;
     private DateTimeFormatter date;
 
     public MonthlyExpenses( String name, double price, DateTimeFormatter date,String Notic) {
-        this.Id = Id;
-        Name = name;
-        Price = price;
+        this.name = name;
+        this.price = price;
         this.date = date;
-        this.Notice=Notic;
+        this.notice =Notic;
     }
 
     public MonthlyExpenses() {
-        Id = 0;
-        Name = "";
-        Price = 0.0;
-        date = null;
-        Notice="";
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public double getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(double price) {
-        Price = price;
+        this.price = price;
     }
 
     public DateTimeFormatter getDate() {
@@ -55,10 +49,10 @@ public class MonthlyExpenses {
     }
 
     public String getNotice() {
-        return Notice;
+        return notice;
     }
 
     public void setNotice(String notice) {
-        Notice = notice;
+        this.notice = notice;
     }
 }

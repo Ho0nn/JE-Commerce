@@ -3,34 +3,34 @@ package com.example.demo.Entity;
 import java.time.format.DateTimeFormatter;
 
 public class SalaryHistory {
-    private int Id,Emp_Id;
-    private double Salary,Deduct,Tot_Sal,Bouns;
+    private int id, empId;
+    private double salary, deduct, totSal, bouns;
     private DateTimeFormatter  date;
 
     public SalaryHistory(int id, double salary, double deduct,double bouns,double tot_Sal,DateTimeFormatter date,int emp_Id) {
-        Id = id;
-        Emp_Id = emp_Id;
-        Salary = salary;
-        Deduct = deduct;
-        Tot_Sal = tot_Sal;
-        Bouns = bouns;
+        this.id = id;
+        empId = emp_Id;
+        this.salary = salary;
+        this.deduct = deduct;
+        totSal = tot_Sal;
+        this.bouns = bouns;
         this.date = date;
     }
 
-    public double getTot_Sal() {
-        return Tot_Sal;
+    public double getTotSal() {
+        return totSal;
     }
 
-    public void setTot_Sal(double tot_Sal) {
-        Tot_Sal = tot_Sal;
+    public void setTotSal(double totSal) {
+        this.totSal = totSal;
     }
 
     public double getBouns() {
-        return Bouns;
+        return bouns;
     }
 
     public void setBouns(double bouns) {
-        Bouns = bouns;
+        this.bouns = bouns;
     }
 
     public DateTimeFormatter getDate() {
@@ -42,34 +42,34 @@ public class SalaryHistory {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
-    public int getEmp_Id() {
-        return Emp_Id;
+    public int getEmpId() {
+        return empId;
     }
 
-    public void setEmp_Id(int emp_Id) {
-        Emp_Id = emp_Id;
+    public void setEmpId(int empId) {
+        this.empId = empId;
     }
 
     public double getSalary() {
-        return Salary;
+        return salary;
     }
 
     public void setSalary(double salary) {
-        Salary = salary;
+        this.salary = salary;
     }
 
     public double getDeduct() {
-        return Deduct;
+        return deduct;
     }
 
     public void setDeduct(double deduct) {
-        Deduct = deduct;
+        this.deduct = deduct;
     }
 }

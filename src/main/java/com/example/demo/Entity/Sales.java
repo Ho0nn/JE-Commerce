@@ -2,92 +2,92 @@ package com.example.demo.Entity;
 
 import java.time.LocalDate;
 public class Sales {
-    private int ID,Bill_ID,Cust_ID,Prod_ID;
-    private String Sreil_Num,Bill_Num;
-  private double Piece_Price,Discount,Tot_Price;
+    private int id, billID, custID, prodID;
+    private String sreilNum, billNum;
+  private double piecePrice, discount, totPrice;
     private LocalDate date;
     public Sales(double piece_Price, double discount, double tot_Price, LocalDate date, int prod_ID, String sreil_Num, int bill_ID, String bill_Num) {
-        Prod_ID = prod_ID;
-        Sreil_Num = sreil_Num;
-        Bill_Num = bill_Num;
-        Piece_Price = piece_Price;
-        Bill_ID=bill_ID;
-        Discount = discount;
-        Tot_Price = tot_Price;
+        prodID = prod_ID;
+        sreilNum = sreil_Num;
+        billNum = bill_Num;
+        piecePrice = piece_Price;
+        billID =bill_ID;
+        this.discount = discount;
+        totPrice = tot_Price;
         this.date = date;
 
     }
 
     public int getID() {
-        return ID;
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setID(int id) {
+        this.id = id;
     }
 
-    public int getBill_ID() {
-        return Bill_ID;
+    public int getBillID() {
+        return billID;
     }
 
-    public void setBill_ID(int bill_ID) {
-        Bill_ID = bill_ID;
+    public void setBillID(int billID) {
+        this.billID = billID;
     }
 
-    public int getCust_ID() {
-        return Cust_ID;
+    public int getCustID() {
+        return custID;
     }
 
-    public void setCust_ID(int cust_ID) {
-        Cust_ID = cust_ID;
+    public void setCustID(int custID) {
+        this.custID = custID;
     }
 
-    public int getProd_ID() {
-        return Prod_ID;
+    public int getProdID() {
+        return prodID;
     }
 
-    public void setProd_ID(int prod_ID) {
-        Prod_ID = prod_ID;
+    public void setProdID(int prodID) {
+        this.prodID = prodID;
     }
 
-    public String getSreil_Num() {
-        return Sreil_Num;
+    public String getSreilNum() {
+        return sreilNum;
     }
 
-    public void setSreil_Num(String sreil_Num) {
-        Sreil_Num = sreil_Num;
+    public void setSreilNum(String sreilNum) {
+        this.sreilNum = sreilNum;
     }
 
-    public String getBill_Num() {
-        return Bill_Num;
+    public String getBillNum() {
+        return billNum;
     }
 
-    public void setBill_Num(String bill_Num) {
-        Bill_Num = bill_Num;
+    public void setBillNum(String billNum) {
+        this.billNum = billNum;
     }
 
-    public double getPiece_Price() {
-        return Piece_Price;
+    public double getPiecePrice() {
+        return piecePrice;
     }
 
-    public void setPiece_Price(Float piece_Price) {
-        Piece_Price = piece_Price;
+    public void setPiecePrice(Float piecePrice) {
+        this.piecePrice = piecePrice;
     }
 
     public double getDiscount() {
-        return Discount;
+        return discount;
     }
 
     public void setDiscount(Float discount) {
-        Discount = discount;
+        this.discount = discount;
     }
 
-    public double getTot_Price() {
-        return Tot_Price;
+    public double getTotPrice() {
+        return totPrice;
     }
 
-    public void setTot_Price(Float tot_Price) {
-        Tot_Price = tot_Price;
+    public void setTotPrice(Float totPrice) {
+        this.totPrice = totPrice;
     }
 
     public LocalDate getDate() {

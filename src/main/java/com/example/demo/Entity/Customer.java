@@ -3,45 +3,45 @@ package com.example.demo.Entity;
 import java.time.LocalDate;
 
 public class Customer {
-    private int Id;
-    private String Name,Phone;
-    private LocalDate dete;
-    public Customer(int id, String name, String phone, LocalDate dete) {
-        Id = id;
-        Name = name;
-        Phone = phone;
-        this.dete = dete;
+    private int id;
+    private String name, phone;
+    private LocalDate date;
+    public Customer(int id, String name, String phone, LocalDate date) {
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.date = date;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
-    public LocalDate getDete() {
-        return dete;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setDete(LocalDate dete) {
-        this.dete = dete;
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 }

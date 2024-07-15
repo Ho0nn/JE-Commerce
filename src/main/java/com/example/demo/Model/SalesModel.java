@@ -22,16 +22,16 @@ public class SalesModel {
     public void addData(Sales sales) {
         String insertData = "INSERT INTO sales(price_per_one, discount, total_price, date_time, product_id, serial_number, bill_id, bill_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement preparedStatement = con.prepareStatement(insertData)) {
-            preparedStatement.setDouble(1, sales.getPiece_Price());
+            preparedStatement.setDouble(1, sales.getPiecePrice());
             preparedStatement.setDouble(2, sales.getDiscount());
-            preparedStatement.setDouble(3, sales.getTot_Price());
+            preparedStatement.setDouble(3, sales.getTotPrice());
             LocalDate localDate = sales.getDate();
             Date sqlDate = Date.valueOf(localDate);
             preparedStatement.setDate(4, sqlDate);
-            preparedStatement.setInt(5, sales.getProd_ID());
-            preparedStatement.setString(6, sales.getSreil_Num());
-            preparedStatement.setInt(7, sales.getBill_ID());
-            preparedStatement.setString(8, sales.getBill_Num());
+            preparedStatement.setInt(5, sales.getProdID());
+            preparedStatement.setString(6, sales.getSreilNum());
+            preparedStatement.setInt(7, sales.getBillID());
+            preparedStatement.setString(8, sales.getBillNum());
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Data Inserted Successfully!");
@@ -46,9 +46,9 @@ public class SalesModel {
     public void updateData(Sales sales) {
         String updateData = "UPDATE sales SET price_per_one=?, discount=?, total_price=? WHERE id=?";
         try (PreparedStatement preparedStatement = con.prepareStatement(updateData)) {
-            preparedStatement.setDouble(1, sales.getPiece_Price());
+            preparedStatement.setDouble(1, sales.getPiecePrice());
             preparedStatement.setDouble(2, sales.getDiscount());
-            preparedStatement.setDouble(3, sales.getTot_Price());
+            preparedStatement.setDouble(3, sales.getTotPrice());
             preparedStatement.setInt(4, sales.getID());
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {

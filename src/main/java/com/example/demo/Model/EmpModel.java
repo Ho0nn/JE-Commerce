@@ -22,11 +22,11 @@ public class EmpModel {
             preparedStatement.setString(1, emp.getName());
             preparedStatement.setString(2, emp.getPhone());
             preparedStatement.setString(3,emp.getEmail());
-            preparedStatement.setString(4, emp.getUser_Name());
+            preparedStatement.setString(4, emp.getUserName());
             preparedStatement.setString(5,emp.getPass());
             preparedStatement.setBoolean(6, true);
             preparedStatement.setDouble(7,emp.getSalary());
-            preparedStatement.setInt(8,emp.getRole_Id());
+            preparedStatement.setInt(8,emp.getRoleId());
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Data Inserted Successfully!");

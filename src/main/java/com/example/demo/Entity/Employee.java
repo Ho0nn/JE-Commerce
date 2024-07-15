@@ -1,93 +1,84 @@
 package com.example.demo.Entity;
 
 public class Employee {
-    private int Id,role_Id;
-    private String user_Name,Pass,Phone,Email,Name;
-   private double Salary;
-    private boolean Active;
-    public Employee( String name,String phone, String email, String user_Name, String pass,boolean active, double salary,  int role_Id) {
-        this.role_Id = role_Id;
-        this.user_Name = user_Name;
-        Pass = pass;
-        Phone = phone;
-        Email = email;
-        Name = name;
-        Salary = salary;
-        Active = true;
+    private int id, roleId;
+    private String userName, pass, phone, email, name;
+   private double salary;
+    private boolean active;
+    public Employee(String name, String phone, String email, String userName, String pass, boolean active, double salary, int roleId) {
+        this.roleId = roleId;
+        this.userName = userName;
+        this.pass = pass;
+        this.phone = phone;
+        this.email = email;
+        this.name = name;
+        this.salary = salary;
+        this.active = true;
     }
     public Employee(){
-        Id = 0;
-        this.role_Id = 0;
-        this.user_Name = "";
-        Pass = "";
-        Phone = "";
-        Email = "";
-        Name = "";
-        Salary = 0.0;
-        Active = true;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
-    public int getRole_Id() {
-        return role_Id;
+    public int getRoleId() {
+        return roleId;
     }
 
-    public void setRole_Id(int role_Id) {
-        this.role_Id = role_Id;
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
-    public String getUser_Name() {
-        return user_Name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_Name(String user_Name) {
-        this.user_Name = user_Name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPass() {
-        return Pass;
+        return pass;
     }
 
     public void setPass(String pass) {
-        Pass = pass;
+        this.pass = pass;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public double getSalary() {
-        return Salary;
+        return salary;
     }
 
     public void setSalary(double salary) {
-        Salary = salary;
+        this.salary = salary;
     }
 }

@@ -3,28 +3,20 @@ package com.example.demo.Entity;
 import java.time.LocalDate;
 
 public class Bill{
-    private int id,Emp_Id;
-    private double Tot_Price,Disc,Final_Tot;
+    private int id, empId;
+    private double totPrice, disc, finalTot;
     private LocalDate date;
-    private String Bill_Num,Day_Bill_Num;
-    public Bill( double tot_Price, double disc, double final_Tot, LocalDate date, String bill_Num, String day_Bill_Num,int emp_Id ) {
-        Emp_Id = emp_Id;
-        Tot_Price = tot_Price;
-        Disc = disc;
-        Final_Tot = final_Tot;
+    private String billNum, dayBillNum;
+    public Bill( double totPrice, double disc, double finalTot, LocalDate date, String billNum, String dayBillNum,int empId ) {
+        this.empId = empId;
+        this.totPrice = totPrice;
+        this.disc = disc;
+        this.finalTot = finalTot;
         this.date = date;
-        Bill_Num = bill_Num;
-        Day_Bill_Num = day_Bill_Num;
+        this.billNum = billNum;
+        this.dayBillNum = dayBillNum;
     }
     public Bill(){
-        id = 0;
-        Emp_Id = 0;
-        Tot_Price = 0;
-        Disc = 0;
-        Final_Tot =0;
-      date=getDate();
-        Bill_Num = "";
-        Day_Bill_Num = "";
     }
 
     public int getId() {
@@ -35,36 +27,36 @@ public class Bill{
         this.id = id;
     }
 
-    public int getEmp_Id() {
-        return Emp_Id;
+    public int getEmpId() {
+        return empId;
     }
 
-    public void setEmp_Id(int emp_Id) {
-        Emp_Id = emp_Id;
+    public void setEmpId(int empId) {
+        this.empId = empId;
     }
 
-    public double getTot_Price() {
-        return Tot_Price;
+    public double getTotPrice() {
+        return totPrice;
     }
 
-    public void setTot_Price(double tot_Price) {
-        Tot_Price = tot_Price;
+    public void setTotPrice(double totPrice) {
+        this.totPrice = totPrice;
     }
 
     public double getDisc() {
-        return Disc;
+        return disc;
     }
 
     public void setDisc(double disc) {
-        Disc = disc;
+        this.disc = disc;
     }
 
-    public double getFinal_Tot() {
-        return Final_Tot;
+    public double getFinalTot() {
+        return finalTot;
     }
 
-    public void setFinal_Tot(double final_Tot) {
-        Final_Tot = final_Tot;
+    public void setFinalTot(double finalTot) {
+        this.finalTot = finalTot;
     }
 
     public LocalDate getDate() {
@@ -75,20 +67,20 @@ public class Bill{
         date = Date;
     }
 
-    public String getBill_Num() {
-        return Bill_Num;
+    public String getBillNum() {
+        return billNum;
     }
 
-    public void setBill_Num(String bill_Num) {
-        Bill_Num = bill_Num;
+    public void setBillNum(String billNum) {
+        this.billNum = billNum;
     }
 
-    public String getDay_Bill_Num() {
-        return Day_Bill_Num;
+    public String getDayBillNum() {
+        return dayBillNum;
     }
 
-    public void setDay_Bill_Num(String day_Bill_Num) {
-        Day_Bill_Num = day_Bill_Num;
+    public void setDayBillNum(String dayBillNum) {
+        this.dayBillNum = dayBillNum;
     }
 
 }

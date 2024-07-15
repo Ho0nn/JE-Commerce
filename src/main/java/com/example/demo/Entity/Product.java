@@ -1,12 +1,12 @@
 package com.example.demo.Entity;
 
 public class Product {
-    private int ID, amount, categoryID;
+    private int id, amount, categoryID;
     private String name, serialNum;
     private double buyPrice, sellPrice, discount;
 
     public Product( String name, double buyPrice, double sellPrice, double discount, int amount, String serialNum, int categoryID) {
-        this.ID=ID;
+        this.id = id;
         this.amount = amount;
         this.name = name;
         this.serialNum = serialNum;
@@ -17,22 +17,15 @@ public class Product {
     }
 
     public Product() {
-        this.ID = 0;
-        this.amount = 0;
-        this.name = "";
-        this.serialNum = "";
-        this.buyPrice = 0.0;
-        this.discount = 0.0;
-        this.sellPrice = 0.0;
-        this.categoryID = 0;
+
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getAmount() {
