@@ -7,12 +7,12 @@ public class SalaryHistory {
     private double salary, deduct, totSal, bouns;
     private DateTimeFormatter  date;
 
-    public SalaryHistory(int id, double salary, double deduct,double bouns,double tot_Sal,DateTimeFormatter date,int emp_Id) {
+    public SalaryHistory(int id, double salary, double deduct,double bouns,double totSal,DateTimeFormatter date,int empId) {
         this.id = id;
-        empId = emp_Id;
+        this.empId = empId;
         this.salary = salary;
         this.deduct = deduct;
-        totSal = tot_Sal;
+        this.totSal = totSal;
         this.bouns = bouns;
         this.date = date;
     }

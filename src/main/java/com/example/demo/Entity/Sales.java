@@ -6,14 +6,14 @@ public class Sales {
     private String sreilNum, billNum;
   private double piecePrice, discount, totPrice;
     private LocalDate date;
-    public Sales(double piece_Price, double discount, double tot_Price, LocalDate date, int prod_ID, String sreil_Num, int bill_ID, String bill_Num) {
-        prodID = prod_ID;
-        sreilNum = sreil_Num;
-        billNum = bill_Num;
-        piecePrice = piece_Price;
-        billID =bill_ID;
+    public Sales(double piecePrice, double discount, double totPrice, LocalDate date, int prodID, String sreilNum, int billID, String billNum) {
+        this.prodID = prodID;
+        this.sreilNum = sreilNum;
+        this.billNum = billNum;
+        this.piecePrice = piecePrice;
+        this.billID =billID;
         this.discount = discount;
-        totPrice = tot_Price;
+        this.totPrice = totPrice;
         this.date = date;
 
     }

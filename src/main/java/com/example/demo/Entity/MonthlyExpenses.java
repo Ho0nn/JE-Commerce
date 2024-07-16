@@ -6,11 +6,11 @@ public class MonthlyExpenses {
     private double price;
     private DateTimeFormatter date;
 
-    public MonthlyExpenses( String name, double price, DateTimeFormatter date,String Notic) {
+    public MonthlyExpenses( String name, double price, DateTimeFormatter date,String notic) {
         this.name = name;
         this.price = price;
         this.date = date;
-        this.notice =Notic;
+        this.notice =notic;
     }
 
     public MonthlyExpenses() {
