@@ -16,6 +16,7 @@ public class Employee {
         this.active = true;
     }
     public Employee(){
+        this.active = true;
     }
 
     public int getId() {

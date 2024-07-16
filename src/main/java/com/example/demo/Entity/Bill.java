@@ -17,6 +17,7 @@ public class Bill{
         this.dayBillNum = dayBillNum;
     }
     public Bill(){
+        date=getDate();
     }
 
     public int getId() {
